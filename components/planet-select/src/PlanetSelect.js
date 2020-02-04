@@ -49,7 +49,7 @@ export class PlanetSelect extends LitElement {
               }}
             >
               <mwc-ripple></mwc-ripple>
-              <img src="/components/assets/images/${planet}.png" />
+              <img src="/assets/images/${planet}.png" />
             </planet-item>
           `;
         })}

@@ -16,7 +16,7 @@ export class SpaceAdventure extends LitElement {
         display: flex;
         flex-direction: column;
         font-size: calc(10px + 2vmin);
-        background: url("/components/assets/images/Background.png");
+        background: url("/assets/images/Background.png");
         background-repeat: no-repeat;
         background-size: cover;
         color: #f5f5f5;
