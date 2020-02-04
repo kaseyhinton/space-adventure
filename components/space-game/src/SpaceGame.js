@@ -50,7 +50,8 @@ export class SpaceGame extends LitElement {
   static get properties() {
     return {
       state: { type: String },
-      selectedPlanet: { type: String }
+      selectedPlanet: { type: String },
+      showLaunchButton: { type: Boolean }
     };
   }
 
@@ -58,11 +59,24 @@ export class SpaceGame extends LitElement {
     super();
     this.state = GAME_STATE.planetSelect;
     this.selectedPlanet = null;
+
+    // Launch Screen
+    this.showLaunchButton = false;
+  }
+
+  _setLaunchPhase() {
+    this.state = GAME_STATE.launch;
+    setTimeout(() => {
+      this.showLaunchButton = true;
+    }, 12000);
   }
 
   _reset() {
     this.state = GAME_STATE.planetSelect;
     this.selectedPlanet = null;
+
+    // Launch Screen
+    this.showLaunchButton = false;
   }
 
   render() {
@@ -73,7 +87,7 @@ export class SpaceGame extends LitElement {
               <planet-select
                 @planet-selected=${event => {
                   this.selectedPlanet = event.detail;
-                  this.state = GAME_STATE.launch;
+                  this._setLaunchPhase();
                 }}
                 ?hidden=${this.state !== GAME_STATE.planetSelect}
               ></planet-select>
@@ -84,6 +98,7 @@ export class SpaceGame extends LitElement {
                 <launch-console></launch-console>
                 <flex-spacer></flex-spacer>
                 <launch-button
+                  ?hidden=${!this.showLaunchButton}
                   text="Launch"
                   @click=${() => {
                     setTimeout(() => {
