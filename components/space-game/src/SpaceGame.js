@@ -86,7 +86,9 @@ export class SpaceGame extends LitElement {
                 <launch-button
                   text="Launch"
                   @click=${() => {
-                    this.state = GAME_STATE.victory;
+                    setTimeout(() => {
+                      this.state = GAME_STATE.victory;
+                    }, 300);
                   }}
                 ></launch-button>
               </launch-screen>
@@ -96,7 +98,9 @@ export class SpaceGame extends LitElement {
               <launch-button
                 text="Reset"
                 @click=${() => {
-                  this._reset();
+                  setTimeout(() => {
+                    this._reset();
+                  }, 300);
                 }}
               ></launch-button>
             `}

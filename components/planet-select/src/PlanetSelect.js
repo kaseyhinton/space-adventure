@@ -39,13 +39,15 @@ export class PlanetSelect extends LitElement {
           return html`
             <planet-item
               @click=${() => {
-                this.dispatchEvent(
-                  new CustomEvent("planet-selected", {
-                    bubbles: true,
-                    composed: true,
-                    detail: planet
-                  })
-                );
+                setTimeout(() => {
+                  this.dispatchEvent(
+                    new CustomEvent("planet-selected", {
+                      bubbles: true,
+                      composed: true,
+                      detail: planet
+                    })
+                  );
+                }, 300);
               }}
             >
               <mwc-ripple></mwc-ripple>
