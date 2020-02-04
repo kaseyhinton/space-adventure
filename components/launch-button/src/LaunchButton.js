@@ -13,6 +13,7 @@ export class LaunchButton extends LitElement {
         align-items: center;
         align-self: center;
         padding: 24px;
+        font-size: 22px;
         background: var(--primary-color);
         color: #f5f5f5;
         border: 4px solid #f5f5f5;
@@ -21,11 +22,17 @@ export class LaunchButton extends LitElement {
         height: 100px;
         overflow: hidden;
       }
-      
+
       [button] > span {
         margin-bottom: 8px;
       }
     `;
+  }
+
+  static get properties() {
+    return {
+      text: { type: String }
+    };
   }
 
   render() {
@@ -33,7 +40,7 @@ export class LaunchButton extends LitElement {
       <div button>
         <mwc-ripple></mwc-ripple>
         <span>
-          LAUNCH
+          ${this.text}
         </span>
       </div>
     `;
