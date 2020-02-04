@@ -891,6 +891,13 @@
     whatwg-fetch "^3.0.0"
     whatwg-url "^7.0.0"
 
+"@polymer/lit-element@^0.6.1":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@polymer/lit-element/-/lit-element-0.6.5.tgz#c614b9638a0809883ba52bf43fca5b6ed51b7aa8"
+  integrity sha512-KVjuU/5Ugp6PFob6YEe1/B4GCKjqhEy9Tj954shL6d3DohT2sNAmbX9QfbXvcZ8RhbVELK6dzbN3i2BRA3mOKg==
+  dependencies:
+    lit-html "^1.0.0-rc.1"
+
 "@rollup/plugin-node-resolve@^6.1.0":
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-6.1.0.tgz#0d2909f4bf606ae34d43a9bc8be06a9b0c850cf0"
@@ -1887,7 +1894,7 @@ lit-element@^2.0.1, lit-element@^2.2.1:
   dependencies:
     lit-html "^1.0.0"
 
-lit-html@^1.0.0, lit-html@^1.1.2:
+lit-html@^1.0.0, lit-html@^1.0.0-rc.1, lit-html@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-1.1.2.tgz#2e3560a7075210243649c888ad738eaf0daa8374"
   integrity sha512-FFlUMKHKi+qG1x1iHNZ1hrtc/zHmfYTyrSvs3/wBTvaNtpZjOZGWzU7efGYVpgp6KvWeKF6ql9/KsCq6Z/mEDA==
@@ -2565,6 +2572,11 @@ type-is@^1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
+typed.js@^2.0.11, typed.js@^2.0.9:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.11.tgz#d298a91f959f11a3803bf48b841a6fadd29640d9"
+  integrity sha512-1ZORHalEyLob34q738mqmwp0pT6syMigB1SZuTItqdhovWBKFIt7I5uVALXAGQZCg2MCtihCt6uqkoqPJK+9iQ==
+
 typical@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/typical/-/typical-4.0.0.tgz#cbeaff3b9d7ae1e2bbfaf5a4e6f11eccfde94fc4"
@@ -2633,6 +2645,14 @@ vary@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+wc-typed-js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/wc-typed-js/-/wc-typed-js-1.0.1.tgz#b0a6055a974fad765e6380f9eee60185cde774fb"
+  integrity sha512-O2dDdZ2ILTWu5Y1BRHpkHDa8QuWs8TbMk6d5/k4G2SGRMlhz/HADAFVo86TGpZd9F2LpNlCC9suH7XSUUPGp5g==
+  dependencies:
+    "@polymer/lit-element" "^0.6.1"
+    typed.js "^2.0.9"
 
 webidl-conversions@^4.0.2:
   version "4.0.2"
