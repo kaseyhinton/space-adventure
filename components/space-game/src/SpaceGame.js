@@ -69,6 +69,7 @@ export class SpaceGame extends LitElement {
     setTimeout(() => {
       this.showLaunchButton = true;
     }, 12000);
+    console.log("test");
   }
 
   _reset() {
